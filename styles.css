@@ -1,0 +1,201 @@
+body{
+    margin : 15px 25px;
+    /* background-color: purple; */
+    background: linear-gradient(45deg, #ff6ec4, #7873f5);
+    animation: gradientBG 10s ease infinite;
+    background-size: 400% 400%;
+    padding: 10px;
+}
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+#top-panel{
+    background-color: aquamarine;
+    height: 80px;
+    width: 100%;
+    display:flex;
+    border: 1px solid black;
+}
+.logo{
+    width: 80px;
+
+}
+.logo img{
+    height: 165px;
+    width: 180px;
+    display:flex;
+    border-radius: 100px;
+}
+
+#navigation-bar{
+    background-color: brown;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    border: 1px solid black;
+    justify-content: center;   
+    align-items: center;
+}
+
+#navigation-bar a{
+    color:bisque;
+    display: block;        
+    float: left;
+    text-align: center;
+    padding-top:20px;
+    padding-left:40px;    
+    padding-right:40px;    
+    overflow:hidden;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+}
+#navigation-bar a:hover{
+    background-color: white;
+    color:green;
+}
+#remaining-body{    
+    height:350px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flexbox;    
+    text-align: center;
+    font-size: 25px;
+    color:rgb(204, 204, 29);
+    margin-right: 40px;
+    margin-left:40px;
+}
+.mascot-container {
+    /* position: fixed; */
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  #mascot {
+    width: 200px;
+    cursor: pointer;
+  }
+  
+  .speech-bubble {
+    margin-left: 10px;
+    padding: 10px 15px;
+    background: #f0f0f0;
+    border-radius: 15px;
+    border: 2px solid #ccc;
+    font-size: 20px;
+    color: #333;
+    position: relative;
+    animation: fadeIn 1s;
+  }
+  
+  .speech-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 20px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 0 10px;
+    border-color: #f0f0f0 transparent transparent transparent;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+#slide-in {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideIn 1.5s ease-out forwards;
+  }
+
+  @keyframes slideIn {
+   to{                                                            /*good can be used */
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }   
+  .neon-text {
+    font-size: 4rem;
+    color: #fff;
+    text-shadow: 0 0 5px #fff, 0 0 10px #ff0080, 0 0 20px #ff0080, 0 0 40px #ff0080, 0 0 80px #ff0080;
+    animation: neonPulse 1.5s infinite alternate;
+}
+@keyframes neonPulse {
+    from {
+        text-shadow: 0 0 5px #fff, 0 0 10px #ff0080, 0 0 20px #ff0080, 0 0 40px #ff0080, 0 0 80px #ff0080;
+    }
+    to {
+        text-shadow: 0 0 2px #fff, 0 0 8px #ff0080, 0 0 15px #ff0080, 0 0 30px #ff0080, 0 0 60px #ff0080;
+    }
+}
+
+.background-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.particle {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: moveParticle 3s ease-in-out infinite;
+    opacity: 0.8;
+}
+
+@keyframes moveParticle {
+    0% {
+        transform: translateY(0) translateX(0) scale(0.5);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-50vh) translateX(50vw) scale(1.2);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(-100vh) translateX(-50vw) scale(0.8);
+        opacity: 0;
+    }
+}
+
+@keyframes colorShift {
+    0% {
+        background: radial-gradient(circle, rgba(255, 87, 34, 0.8) 0%, transparent 70%);
+    }
+    50% {
+        background: radial-gradient(circle, rgba(33, 150, 243, 0.8) 0%, transparent 70%);
+    }
+    100% {
+        background: radial-gradient(circle, rgba(76, 175, 80, 0.8) 0%, transparent 70%);
+    }
+}
+
+h1:hover ~ .background-effect .particle {
+    animation-name: moveParticle, colorShift;
+}
+
+.text-shadow {
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0.3);
+    transition: text-shadow 0.5s ease;
+  }
+
+  .text-shadow:hover {
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+  }
