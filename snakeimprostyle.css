@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #1e3c72, #2a5298);
+    color: white;
+    text-align: center;
+  }
+  
+  h1 {
+    margin-top: 20px;
+    font-size: 2.5rem;
+    color: #ff5722;
+  }
+  
+  .instructions {
+    font-size: 1rem;
+    margin: 10px 0;
+    color: #ccc;
+  }
+  
+  .game-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 20px auto;
+    background: radial-gradient(circle, #000, #333);
+    border-radius: 10px;
+    border: 2px solid #555;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+  }
+  
+  .snake, .food {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .snake {
+    background: #4caf50;
+    border-radius: 50%;
+    transition: background 0.2s ease;
+  }
+  
+  .food {
+    background: #ff1744;
+    border-radius: 50%;
+  }
+  
+  .score {
+    margin: 10px 0;
+    font-size: 1.2rem;
+  }
+  
+  .controls {
+    margin: 20px;
+  }
+  
+  button {
+    padding: 10px 15px;
+    margin: 5px;
+    background-color: #ff5722;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #e64a19;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
