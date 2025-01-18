@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-effect"></div>
+    <div id="top-panel">
+        <div class="logo"><img src="logoimg.webp" alt="logo_img"></div>
+    </div>
+    <div id="navigation-bar">
+        <a href="index.html">
+            Home
+        </a>
+        <a href="games.html">
+            Games
+        </a>
+        <a href="contact.html">
+            Contact
+        </a>
+        <a href="about.html">
+            About
+        </a>
+    </div>
+    <span id="remaining-body">
+        <p id="slide-in" class="neon-text" >Welcome to Riya's gaming world.</p>
+        <p id="slide-in" class="text-shadow">Discover Games Built for Fun and Learning!
+        Welcome to our collection of web-based games! Built with HTML, CSS, and JavaScript, 
+        these games demonstrate the power of coding and creativity. Explore, play, and
+        enjoy!            
+        </p>
+    </span>
+    <div class="mascot-container">
+        <img src="mascotimg.webp" alt="Mascot" id="mascot">
+        <div class="speech-bubble" id="speechBubble">Welcome to the game hub!</div>
+      </div>
+    <script src="mascotdemoscript.js"></script>
+    <script>
+        const effectContainer = document.querySelector('.background-effect');
+
+        function createDynamicParticle() {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+
+            const size = Math.random() * 10 + 5;
+            particle.style.width = `${size}px`;
+            particle.style.height = `${size}px`;
+
+            particle.style.left = `${Math.random() * 100}vw`;
+            particle.style.top = `${Math.random() * 100}vh`;
+
+            particle.style.animationDelay = `${Math.random() * 2}s`;
+            effectContainer.appendChild(particle);
+
+            setTimeout(() => particle.remove(), 3000);
+        }
+
+        setInterval(createDynamicParticle, 100);
+    </script>
+</body>
+</html>
