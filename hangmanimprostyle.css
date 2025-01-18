@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    /* background-color: #f4f4f4; */
+    background: linear-gradient(to bottom, #1e7244, #2a5298);
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color:brown;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #e54e4e;
+}
+
+#hangman-game {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#word-display {
+    font-size: 2rem;
+    margin: 20px 0;
+    letter-spacing: 10px;
+}
+
+#letters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.letter-button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.letter-button:hover {
+    background-color: #0056b3;
+}
+
+.letter-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#status {
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+#hint-container {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+#hint-text {
+    color: #007bff;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#hint {
+    margin-top: 10px;
+    color: #444;
+    font-style: italic;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+button {
+    margin-top: 20px;
+    font-size: 1rem;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Game</title>
+    <link rel="stylesheet" href="hangmanimprostyle.css">
+</head>
+<body>
+    <header>
+        <h1>Hangman Game</h1>
+        <p>Guess the word by choosing letters. You have 6 chances. Good luck!</p>
+    </header>
+    <main>
+        <div id="hangman-game">
+            <div id="word-display"></div>
+            <div id="letters"></div>
+            <div id="status">
+                <p>Wrong Guesses Left: <span id="remaining-guesses">6</span></p>
+                <p>Guessed Letters: <span id="guessed-letters"></span></p>
+            </div>
+            <div id="hint-container">
+                <span id="hint-text" onclick="showHint()">Hint?</span>
+                <p id="hint"></p>
+            </div>
+            <div id="result"></div>
+        </div>
+        <button id="back-button" onclick="goBack()">Back</button>
+        <button id="restart-game" onclick="restart()">Restart</button>
+    </main>
+    <script src="hangmanimproscript.js"></script>
+</body>
+</html>
