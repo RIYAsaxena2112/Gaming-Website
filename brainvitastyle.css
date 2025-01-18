@@ -1,0 +1,98 @@
+/* brainvita.css */
+
+body {
+    font-family: Arial, sans-serif;
+    /* background-color: #f4f4f4; */
+    background: linear-gradient(to bottom, #eb4b8e, #b954e1);
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(7, 50px);
+    justify-content: center;
+    gap: 5px;
+    margin: 20px auto;
+}
+
+.cell {
+    width: 50px;
+    height: 50px;
+    background-color: #ddd;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s ease;
+}
+
+/* Highlight for marble selection */
+.cell.marble {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.cell.marble.selected {
+    background-color: #ff9800; /* Highlight selected marble */
+}
+
+/* Highlight for empty spaces on hover */
+.cell.empty {
+    background-color: #c8e6c9;
+    cursor: pointer;
+}
+
+.cell.empty:hover {
+    background-color: #c8e6c9; /* Highlight empty space */
+}
+
+.cell.disabled {
+    background-color: transparent;
+    pointer-events: none;
+}
+#status {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+#game-over-message {
+    font-size: 18px;
+    color: red;
+    margin-top: 20px;
+}
+button {
+    margin-top: 20px;
+    font-size: 1rem;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
