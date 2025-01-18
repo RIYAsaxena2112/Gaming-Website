@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="chess3d.css">
+</head>
+<body>
+    <header>
+        <h1>Chess Game</h1>
+        <p>Click on a piece to select it and then click on a valid target cell to move it. Play alternates between White and Black.</p>
+        <div id="current-player">Current Turn: <span id="player-turn">White</span></div>
+    </header>
+    <main>
+        <div id="chess-container">
+            <div id="chess-board"></div>
+        </div>
+        <button id="reset-button" onclick="resetGame()">Reset</button>
+        <button id="back-button" onclick="goBack()">Back</button>
+    </main>
+    <script src="chessupd.js"></script>
+</body>
+</html>
